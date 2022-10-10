@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         viewModel = ViewModelProvider(this)[LoginViewModel::class.java]
+        fragmentsReplacement(loginFragment)
         bottom_nav_login.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.login -> fragmentsReplacement(loginFragment)
